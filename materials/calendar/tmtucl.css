@@ -1,0 +1,104 @@
+*	{
+	margin-top: 0;
+	margin-bottom: 0;
+
+	font-size: 100%;
+	}
+#tmtu-bar	{
+	width: 844px;
+	background-color: #006600;
+	padding: 4px;
+	font-family: Times New Roman, Times, serif;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 18px;
+	}
+
+#title2	{
+	width: 770px;
+	border-width: 1px 0px 0px 0px;
+	border-style: solid;
+	border-color: #009933;
+	padding: 4px 0px 4px 80px;
+	background-color: #CCFF99;
+	color: #003333;
+	font-size: 16px;
+	}
+table.box1	{
+	border-collapse: collapse;
+	background-color: #ccFF99;
+	color: #006666;
+	font-size: 22px;
+	font-family: serif;
+	}
+table.box2	{
+	border-collapse: collapse;
+	background-color: #CCFF99;
+	}
+table th	{
+	font-size: 14px;
+	font-family: 'MS PÉSÉVÉbÉN',Osaka,serif;
+	}
+
+table td	{
+	font-size: 12px;
+	line-height: 1.5em;
+	}
+.xnor
+	{
+	text-align:right;
+	vertical-align:middle;
+	color=black;
+	}
+.xsat
+	{
+	text-align:right;
+	vertical-align:middle;
+	color:blue;
+	}
+.xsun
+	{
+	text-align:right;
+	vertical-align:middle;
+	color:red;
+	}
+.xtra
+	{
+	color:#808040;
+	}
+.xtrai
+	{
+	color:rad;
+	}
+
+#font26	{
+	font-size: 26px;
+	}
+#font24	{
+	font-size: 24px;
+	}
+#font22	{
+	font-size: 22px;
+	}
+#font20	{
+	font-size: 20px;
+	}
+#font18	{
+	font-size: 18px;
+	}
+#font16	{
+	font-size: 16px;
+	}
+#font14	{
+	color: 0;
+	font-size: 14px;
+	}
+#font12	{
+	font-size: 12px;
+	}
+#font11	{
+	font-size: 11px;
+	}
+#font8	{
+	font-size: 10px;
+	}

@@ -1,0 +1,1002 @@
+/* custom variables  */
+@text-color:            @gray;
+
+/*green*/
+@brand-primary:         #3A870B; 
+@brand-primary-light:	lighten(spin(@brand-primary,-10), 10%); 
+@brand-primary-lighter:	lighten(@brand-primary, 60%); 
+
+/*blue*/
+@brand-success:         #0081CC;
+@brand-success-lighter:	lighten(@brand-success, 60%); 
+@brand-success-darker:	darken(@brand-success, 10%); 
+
+/*magenta*/
+@brand-info:            #F30082;
+@brand-info-lighter:	lighten(@brand-info, 60%); 
+
+/*components*/
+@footer-height: 		300px;
+@carousel-height: 		436px;
+@navbar-height:	38px;
+
+/*typography*/
+@font-size-base:          12px;
+@font-size-xsmall:         12px;
+@line-height-xsmall:         1.2;
+@line-height-wide:         1.6;
+
+@input-height-xsmall:        1.2;
+@font-size-h2:            floor((@font-size-base * 1.3)); 
+@font-size-h3:            floor((@font-size-base * 1.1)); 
+
+.emphasized_e {
+	font-family:"Arial Black", Gadget, sans-serif;
+}
+.btn-xs {
+  .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-xsmall; @line-height-xsmall; @border-radius-small);
+}
+
+/* reusable commonly */
+ .title_with_line{
+ 	color:@brand-primary;
+ 	border-top:4px solid @brand-primary;
+ 	border-bottom:2px dotted @gray-dark;
+ 	padding:0.25em 0.5em;
+ 		span {
+ 			font-size:80%;
+ 			margin-left:0.8em
+ 		}
+	 }
+.half-round_title {
+	background:@brand-primary-lighter;
+	color:@brand-primary;
+	font-size:@font-size-h2;
+	padding:5px;
+     border-radius: @border-radius-base @border-radius-base 0 0;
+   }
+	
+.button_gradient_darken(@base_color){
+   #gradient > .vertical(
+   	@start-color:@base_color; 
+   	@end-color: darken(@base_color, 5%);
+   	@start-percent: 0%; 
+   	@end-percent: 100%
+   	);
+   }
+
+ .button_gradient_lighten(@base_color){
+	#gradient > .vertical(
+   	@start-color:lighten(@base_color, 10%); 
+    @end-color: @base_color;
+    @start-percent: 0%; 
+     @end-percent: 100%
+     );
+     }
+
+/* header navigation  */
+/*background gradient*/
+.navbar-wrapper {
+#gradient > .vertical(
+	@start-color: #fff; 
+	@end-color: @navbar-default-color*2;
+	@start-percent: 0%; 
+	@end-percent: 100%
+	);
+}
+
+/*common items*/
+.dropdown{
+	width:120px;
+	a.dropdown-toggle{
+	}
+}
+a.nav-main {
+	color:white !important;}
+	
+/*.input-xs {
+	.btn-xs
+}*/
+
+form{
+	.btn-xs {
+		height:25px !important;
+	}
+}
+
+/*navbar*/
+.navbar {
+	padding:0
+}
+.navbar-nav{
+	li {
+	}
+	a {		
+		font-size:1em;
+		padding-right:5px !important;
+		padding-left:5px !important;
+		padding-top:10px !important;
+		padding-bottom:10px !important;
+		height:@navbar-height !important;
+	}
+	.active {
+		height:@navbar-height !important;
+		/*background:#6F9*/
+		a{background:none  !important;
+		}
+	}
+} 
+
+.navbar-header {
+	height:@navbar-height ;
+}
+
+/*	navbar_upper -- sub */
+.navbar_upper {
+	.hidden-xs ; //create another nav at the page bottom
+	background:black;
+	height:@navbar-height !important;
+	.navbar-collapse{
+		li {
+			font-size:@font-size-xsmall !important;
+			a{
+			font-size:0.8em;
+				&:before{
+			    content: "|";
+			    color: @gray-light;   
+				margin-right:0.5em;  
+				}
+			}
+		}
+	}
+}
+.navbar-right {
+	padding-right:0 !important
+}
+.navbar-brand {
+	&:link {
+		color:white
+	}
+	font-weight:bold;
+	padding-top:10px !important;
+	font-size:1.3em;
+	span {
+		font-size:0.8em;
+	}
+}
+.navbar-form * {
+	font-size:0.8em;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	}
+
+/*	navbar_lower -- main nav*/
+.navbar_lower {
+	.button_gradient_lighten(@brand-primary);
+	margin:0 !important;
+	padding:0 !important;
+	.navbar-nav{
+		margin:0 !important
+	}
+	a {
+		text-align:center;
+		font-size:0.9em;
+		border-right:1px solid @brand-primary-light;
+        @media(max-width: @screen-xs) { //white line for mobile
+		   border:white solid 1px;
+        }
+	}
+	.navbar-nav{
+		width:100%;
+	    li{
+			
+	   	width:100%;
+        @media(min-width: @screen-desktop) {
+          width:18%;
+        }
+	   }
+	   .active{
+		   width:100%;
+           @media(min-width: @screen-desktop) {
+			   width:10%;
+           }
+		   
+		   a{
+			   background:darken(@brand-primary,5)
+		   }
+	   }
+	}
+}
+.navbar-collapse {
+	padding:0 !important; margin:0 !important
+	}
+ 
+/* important! navbar stackoverflow hack */
+.brand {
+  // Vertically center the text given $navbarHeight
+  @elementHeight: 20px;
+  padding: ((@navbar-height - @elementHeight) / 2 - 2) 20px ((@navbar-height - @elementHeight) / 2 + 2);
+  font-size: 20px;
+  line-height: 1;
+}
+.navbar .nav > li > a {
+  @elementHeight: 20px;
+  padding: ((@navbar-height - @elementHeight) / 2 - 1) 10px ((@navbar-height - @elementHeight) / 2 + 1);
+  line-height: 19px;
+}
+
+ 
+/* top page */
+ .index {
+	h2{
+		.title_with_line
+	}
+	h3 {
+		.button_gradient_darken(@brand-primary);
+		border-radius: @border-radius-base;
+		padding:0.3em 0.5em;
+			a{
+				color:white;
+				padding:2px 0 2px 20px;
+				background:url("../images/marker_recommend.png") left 50% no-repeat !important 
+			}
+		}
+	/*お知らせ*/
+	.information{
+		td {
+			padding:0.5em;
+			border-bottom:@gray-lighter solid 1px;
+			line-height:@line-height-wide;
+			&:nth-child(1) {
+				.emphasized_e;
+				width:10%;
+				vertical-align:top;
+				/*color:@brand-primary !important;
+				border-left-color:@brand-primary !important;*/
+			}
+		}
+	.btn-xs{
+		padding:0.1em 0.3em
+		}
+	}
+}
+.accepting::before {
+  content:    "参加受付中"; 
+  .btn; 
+  .btn-info;
+  .btn-xs;
+  margin-right:0.5em
+}
+
+/* sub pages 
+= = = = = = = = */
+/*title darkgray bar*/
+.title{
+	font-size:1.1em;
+	font-weight:bold;
+	padding:3px;
+	background:@gray;
+	.container{
+		color:white;
+		padding-left:3em;
+	}
+}
+	
+ .nav_right{
+	ul {
+		padding:0;
+	}
+}
+/* right navigation sub pages */
+.sub{
+	button {
+		.button_gradient_darken(@brand-success);
+	}
+	h2{
+		.half-round_title !important;
+	}
+	h4{
+		 .title_with_line;
+	}
+	
+	/* 右ナビ */
+	.nav_right{
+		h2{
+			.half-round_title;
+		}
+		h3 {
+			color:@brand-info !important}
+		/*スポンサーズリンク*/	
+		h6{
+			font-size:@font-size-h6;
+			margin-top:2em !important
+		}
+	}
+}
+
+/* banner */
+.banner {
+		padding:1em 0.5em;
+		list-style:none;
+	    border-radius: @border-radius-base;
+		margin-top:0.5em;
+	
+	#gradient > .horizontal(
+		@start-color: #fff; 
+		@end-color: @navbar-default-color*2;
+		@start-percent: 30%; 
+		@end-percent: 100%
+		);
+	padding:0 !important;
+	border:1px solid #ccc;
+	a {
+		font-size:@font-size-small !important;
+		display:block;
+		padding:20px 0 20px 110px;
+		width:100%;
+		height:100%;
+	}
+}
+
+/*sidebar left
+	activeな時は、左罫線分のpaddingに注意*/
+
+/*layer1 */	
+.bs-docs-sidenav{
+	* {
+		padding-right:0 !important;
+	}
+	li{
+		a {
+			border-bottom:1px solid #ccc;
+			
+			font-size:1em !important;
+			border-left-color:@brand-primary !important;
+			padding-left:10px !important;
+			padding-bottom:5px !important;
+			padding-top:5px !important;
+			margin-top:5px;
+			/*subtract 1px for the left border*/
+			&:link{
+				color:@brand-primary !important;
+				border-left-color:@brand-primary !important;
+			}
+			&:focus,&:hover{
+				padding-left:9px !important;
+			}
+		}
+		/*layer1 active*/	
+		.active{	
+			&:focus,&:hover,&:active{
+				padding-left:10px !important;
+			}
+		}
+	} 
+} 
+
+/*あとで整えよう*/
+/*layer2 */	
+.bs-docs-sidenav li ul.nav li a {
+	padding-left:20px !important;
+	}
+
+.bs-docs-sidenav li ul.nav {
+		display:block !important
+	}
+
+	.bs-docs-sidenav li ul.nav li a:focus,
+.bs-docs-sidenav li ul.nav li a:hover
+{
+	padding-left:19px !important;
+	}
+	
+	
+/*layer2 active*/	
+.bs-docs-sidenav .nav .active a:focus,
+.bs-docs-sidenav .nav .active a:hover
+{
+	padding-left:20px !important;
+	}
+
+/*sidebar right*/
+.official_right{
+	.button_gradient_darken(@brand-primary);
+	border-radius: @border-radius-base;
+	padding:0.3em 0.5em;
+	font-style: italic;
+	a{color:white !important}
+}
+
+/*affix*/
+.affix,.affix-top{
+	width:170px !important;
+}
+.affix{
+	position:static;
+	/*background:red;*/
+	*{
+		a{
+		/*background:yellow !important;*/
+		padding-right:0 !important;
+		right:0
+		}
+	}
+}
+
+/* container  */
+.main_container {
+	padding-bottom:400px 
+}
+
+
+/* carousel
+navbarと分離。セルフカスタマイズなので要注意。  */
+ .carousel {
+	background:@brand-primary;
+	height:@carousel-height;
+	}
+#carousel_offset {
+	position:absolute;top:100px; 
+	width:100%;
+ 	top:0;
+	text-align:center;
+	}
+/*carouselコンテンツの高さ*/
+.item {
+	height:@carousel-height;
+	}
+
+#myCarousel,.carousel-inner {
+	height:@carousel-height;
+}
+.carousel-caption{
+	padding:0;
+	left:40%;
+	top:37% !important;/* custom variables  */
+@text-color:            @gray;
+
+/*green*/
+@brand-primary:         #3A870B; 
+@brand-primary-light:	lighten(spin(@brand-primary,-10), 10%); 
+@brand-primary-lighter:	lighten(@brand-primary, 60%); 
+
+/*blue*/
+@brand-success:         #0081CC;
+@brand-success-lighter:	lighten(@brand-success, 60%); 
+@brand-success-darker:	darken(@brand-success, 10%); 
+
+/*magenta*/
+@brand-info:            #F30082;
+@brand-info-lighter:	lighten(@brand-info, 60%); 
+
+/*components*/
+@footer-height: 		300px;
+@carousel-height: 		436px;
+@navbar-height:	38px;
+
+/*typography*/
+@font-size-base:          12px;
+@font-size-xsmall:         12px;
+@line-height-xsmall:         1.2;
+@line-height-wide:         1.6;
+
+@input-height-xsmall:        1.2;
+@font-size-h2:            floor((@font-size-base * 1.3)); 
+@font-size-h3:            floor((@font-size-base * 1.1)); 
+
+.emphasized_e {
+	font-family:"Arial Black", Gadget, sans-serif;
+}
+.btn-xs {
+  .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-xsmall; @line-height-xsmall; @border-radius-small);
+}
+
+/* reusable commonly */
+ .title_with_line{
+ 	color:@brand-primary;
+ 	border-top:4px solid @brand-primary;
+ 	border-bottom:2px dotted @gray-dark;
+ 	padding:0.25em 0.5em;
+ 		span {
+ 			font-size:80%;
+ 			margin-left:0.8em
+ 		}
+	 }
+.half-round_title {
+	background:@brand-primary-lighter;
+	color:@brand-primary;
+	font-size:@font-size-h2;
+	padding:5px;
+     border-radius: @border-radius-base @border-radius-base 0 0;
+   }
+	
+.button_gradient_darken(@base_color){
+   #gradient > .vertical(
+   	@start-color:@base_color; 
+   	@end-color: darken(@base_color, 5%);
+   	@start-percent: 0%; 
+   	@end-percent: 100%
+   	);
+   }
+
+ .button_gradient_lighten(@base_color){
+	#gradient > .vertical(
+   	@start-color:lighten(@base_color, 10%); 
+    @end-color: @base_color;
+    @start-percent: 0%; 
+     @end-percent: 100%
+     );
+     }
+
+/* header navigation  */
+/*background gradient*/
+.navbar-wrapper {
+#gradient > .vertical(
+	@start-color: #fff; 
+	@end-color: @navbar-default-color*2;
+	@start-percent: 0%; 
+	@end-percent: 100%
+	);
+}
+
+/*common items*/
+.dropdown{
+	width:120px;
+	a.dropdown-toggle{
+	}
+}
+a.nav-main {
+	color:white !important;}
+	
+/*.input-xs {
+	.btn-xs
+}*/
+
+form{
+	.btn-xs {
+		height:25px !important;
+	}
+}
+
+/*navbar*/
+.navbar {
+	padding:0
+}
+.navbar-nav{
+	li {
+	}
+	a {		
+		font-size:1em;
+		padding-right:5px !important;
+		padding-left:5px !important;
+		padding-top:10px !important;
+		padding-bottom:10px !important;
+		height:@navbar-height !important;
+	}
+	.active {
+		height:@navbar-height !important;
+		/*background:#6F9*/
+		a{background:none  !important;
+		}
+	}
+} 
+
+.navbar-header {
+	height:@navbar-height ;
+}
+
+/*	navbar_upper*/
+.navbar_upper {
+	background:black;
+	height:@navbar-height !important;
+	.navbar-collapse{
+		li {
+			font-size:@font-size-xsmall !important;
+			a{
+			font-size:0.8em;
+				&:before{
+			    content: "|";
+			    color: @gray-light;   
+				margin-right:0.5em;  
+				}
+			}
+		}
+	}
+}
+.navbar-right {
+	padding-right:0 !important
+}
+.navbar-brand {
+	&:link {
+		color:white
+	}
+	font-weight:bold;
+	padding-top:10px !important;
+	font-size:1.3em;
+	span {
+		font-size:0.8em;
+	}
+}
+.navbar-form * {
+	font-size:0.8em;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	}
+
+/*	navbar_lower*/
+.navbar_lower {
+	.button_gradient_lighten(@brand-primary);
+	margin:0 !important;
+	padding:0 !important;
+	a {text-align:center;
+		font-size:0.9em;
+		border-right:1px solid @brand-primary-light;
+	}
+	.navbar-nav{
+		width:100%;
+	    li{
+	   	width:18%
+	   }
+	   .active{
+		   width:10%;
+		   a{
+			   background:darken(@brand-primary,5)
+		   }
+	   }
+	}
+}
+.navbar-collapse {
+	padding:0 !important; margin:0 !important
+	}
+ 
+/* important! navbar stackoverflow hack */
+.brand {
+  // Vertically center the text given $navbarHeight
+  @elementHeight: 20px;
+  padding: ((@navbar-height - @elementHeight) / 2 - 2) 20px ((@navbar-height - @elementHeight) / 2 + 2);
+  font-size: 20px;
+  line-height: 1;
+}
+.navbar .nav > li > a {
+  @elementHeight: 20px;
+  padding: ((@navbar-height - @elementHeight) / 2 - 1) 10px ((@navbar-height - @elementHeight) / 2 + 1);
+  line-height: 19px;
+}
+
+ 
+/* top page */
+ .index {
+	h2{
+		.title_with_line
+	}
+	h3 {
+		.button_gradient_darken(@brand-primary);
+		border-radius: @border-radius-base;
+		padding:0.3em 0.5em;
+			a{
+				color:white;
+				padding:2px 0 2px 20px;
+				background:url("../images/marker_recommend.png") left 50% no-repeat !important 
+			}
+		}
+	/*お知らせ*/
+	.information{
+		td {
+			padding:0.5em;
+			border-bottom:@gray-lighter solid 1px;
+			line-height:@line-height-wide;
+			&:nth-child(1) {
+				.emphasized_e;
+				width:10%;
+				vertical-align:top;
+				/*color:@brand-primary !important;
+				border-left-color:@brand-primary !important;*/
+			}
+		}
+	.btn-xs{
+		padding:0.1em 0.3em
+		}
+	}
+}
+.accepting::before {
+  content:    "参加受付中"; 
+  .btn; 
+  .btn-info;
+  .btn-xs;
+  margin-right:0.5em
+}
+
+/* sub pages 
+= = = = = = = = */
+/*title darkgray bar*/
+.title{
+	font-size:1.1em;
+	font-weight:bold;
+	padding:3px;
+	background:@gray;
+	.container{
+		color:white;
+		padding-left:3em;
+	}
+}
+	
+ .nav_right{
+	ul {
+		padding:0;
+	}
+}
+/* right navigation sub pages */
+.sub{
+	button {
+		.button_gradient_darken(@brand-success);
+	}
+	h2{
+		.half-round_title !important;
+	}
+	h4{
+		 .title_with_line;
+	}
+	
+	/* 右ナビ */
+	.nav_right{
+		h2{
+			.half-round_title;
+		}
+		h3 {
+			color:@brand-info !important}
+		/*スポンサーズリンク*/	
+		h6{
+			font-size:@font-size-h6;
+			margin-top:2em !important
+		}
+	}
+}
+
+/* banner */
+.banner {
+		padding:1em 0.5em;
+		list-style:none;
+	    border-radius: @border-radius-base;
+		margin-top:0.5em;
+	
+	#gradient > .horizontal(
+		@start-color: #fff; 
+		@end-color: @navbar-default-color*2;
+		@start-percent: 30%; 
+		@end-percent: 100%
+		);
+	padding:0 !important;
+	border:1px solid #ccc;
+	a {
+		font-size:@font-size-small !important;
+		display:block;
+		padding:20px 0 20px 110px;
+		width:100%;
+		height:100%;
+	}
+}
+
+/*sidebar left
+	activeな時は、左罫線分のpaddingに注意*/
+
+/*layer1 */	
+.bs-docs-sidenav{
+	* {
+		padding-right:0 !important;
+	}
+	li{
+		a {
+			border-bottom:1px solid #ccc;
+			
+			font-size:1em !important;
+			border-left-color:@brand-primary !important;
+			padding-left:10px !important;
+			padding-bottom:5px !important;
+			padding-top:5px !important;
+			margin-top:5px;
+			/*subtract 1px for the left border*/
+			&:link{
+				color:@brand-primary !important;
+				border-left-color:@brand-primary !important;
+			}
+			&:focus,&:hover{
+				padding-left:9px !important;
+			}
+		}
+		/*layer1 active*/	
+		.active{	
+			&:focus,&:hover,&:active{
+				padding-left:10px !important;
+			}
+		}
+	} 
+} 
+
+/*あとで整えよう*/
+/*layer2 */	
+.bs-docs-sidenav li ul.nav li a {
+	padding-left:20px !important;
+	}
+
+.bs-docs-sidenav li ul.nav {
+		display:block !important
+	}
+
+	.bs-docs-sidenav li ul.nav li a:focus,
+.bs-docs-sidenav li ul.nav li a:hover
+{
+	padding-left:19px !important;
+	}
+	
+	
+/*layer2 active*/	
+.bs-docs-sidenav .nav .active a:focus,
+.bs-docs-sidenav .nav .active a:hover
+{
+	padding-left:20px !important;
+	}
+
+/*sidebar right*/
+.official_right{
+	.button_gradient_darken(@brand-primary);
+	border-radius: @border-radius-base;
+	padding:0.3em 0.5em;
+	font-style: italic;
+	a{color:white !important}
+}
+
+/*affix*/
+.affix,.affix-top{
+	width:170px !important;
+}
+.affix{
+	position:static;
+	/*background:red;*/
+	*{
+		a{
+		/*background:yellow !important;*/
+		padding-right:0 !important;
+		right:0
+		}
+	}
+}
+
+/* container  */
+.main_container {
+	padding-bottom:400px 
+}
+
+
+/* carousel
+navbarと分離。セルフカスタマイズなので要注意。  */
+ .carousel {
+	background:@brand-primary;
+	height:@carousel-height;
+	}
+#carousel_offset {
+	position:absolute;top:100px; 
+	width:100%;
+ 	top:0;
+	text-align:center;
+	}
+/*carouselコンテンツの高さ*/
+.item {
+	height:@carousel-height;
+	}
+
+#myCarousel,.carousel-inner {
+	height:@carousel-height;
+    @media(max-width: @screen-xs) { //white line for mobile
+		height:@carousel-height-xsmall;
+    }
+	
+}
+.carousel-caption{
+	padding:0;
+	left:40%;
+	top:37% !important;
+	right:10%;
+	bottom:0;
+	text-align:left !important;
+	p {
+		margin-top:2em
+	}
+	h1 {
+		.emphasized_e;
+		font-style:italic;
+		font-size:2.6em;
+		text-align:left;
+		margin-left:-0.2em !important;
+}
+	h2 {
+		text-align:left;
+		margin:0;
+		padding:0;
+		color:white;
+		border:none;
+		font-size:1.1em}
+} 
+	
+/*  sticky footer  */
+
+body {
+  /* sticky footer default is this setting but..
+  Margin bottom by footer height 
+  margin-bottom:@footer-height;*/
+   margin-bottom:0
+}
+#footer {
+	background:@brand-success-darker !important; 
+	height:@footer-height;
+	left:0;
+	.container {
+	  background:none
+  }
+  ul,li{
+  	font-size:@font-size-xsmall; 
+	  list-style:none;
+	  padding:0 !important;
+  }
+}
+
+/*=== local organizations
+ = = = = = = = = = = = = = = = 
+
+.local {
+	background-color:@gray-lighter;
+} */
+
+
+	right:10%;
+	bottom:0;
+	text-align:left !important;
+	p {
+		margin-top:2em
+	}
+	h1 {
+		.emphasized_e;
+		font-style:italic;
+		font-size:2.6em;
+		text-align:left;
+		margin-left:-0.2em !important;
+}
+	h2 {
+		text-align:left;
+		margin:0;
+		padding:0;
+		color:white;
+		border:none;
+		font-size:1.1em}
+} 
+	
+/*  sticky footer  */
+
+body {
+  /* sticky footer default is this setting but..
+  Margin bottom by footer height 
+  margin-bottom:@footer-height;*/
+   margin-bottom:0
+}
+#footer {
+	background:@brand-success-darker !important; 
+	height:@footer-height;
+	left:0;
+	.container {
+	  background:none
+  }
+  ul,li{
+  	font-size:@font-size-xsmall; 
+	  list-style:none;
+	  padding:0 !important;
+  }
+}
+
+/*=== local organizations
+.local {
+	background-color:@gray-lighter;
+} */
+
+/*=== responsive handling matters */
+.dropdown-menu{
+	.make-xs-column(12) !important;
+}

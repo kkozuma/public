@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+	<channel>
+		<title> 一般社団法人　東京都トライアスロン連合</title>
+		<link>http://www.tmtu.or.jp/</link>
+		<description>一般社団法人 東京都トライアスロン連合（TMTU）は、
+競技会の開催や選手、審判員等の育成など、さまざまな活動を通じて、挑戦するあなたをサポートします。 </description>
+		<language>en-us</language>
+		<copyright><![CDATA[ Copyright &copy; TMTU ]]></copyright>
+		<lastBuildDate>Mon, 16 Aug 2010 13:08:50 +0400</lastBuildDate>
+		<docs>http://www.joydeepdeb.com/tools/rss-feeds-generator.html</docs>
+		<image>
+			<url>http://www.tmtu.or.jp/images/tmtu.png</url>
+			<title> 一般社団法人　東京都トライアスロン連合</title>
+			<link>http://www.tmtu.or.jp/</link>
+			<!--width>351</width>
+			<height>92</height-->
+		</image>
+	</channel>
+</rss>

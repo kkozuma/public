@@ -1,0 +1,10 @@
+User-Agent:*
+Disallow:/taikai/
+Disallow:/rennsyuukai/
+Disallow:/tmtu/
+Disallow:/rennsyuukai/
+Disallow:/result/
+
+
+
+Sitemap:http://www.tmtu.or.jp/sitemap.xml

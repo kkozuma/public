@@ -1,0 +1,93 @@
+/*top page urgent information in red background*/
+#urgent{
+	font-style:italic;
+	 font-weight:bold; 
+	 font-size:1.3em;
+	 line-height:1.2; 
+	 background:red; 
+	 color:white; border:none !important; 
+	 padding:0.3em 0.5em; 
+	 margin:0 0.5em 1em;
+	 border-radius: 5px; 
+	 -moz-border-radius: 5px; 
+	 -webkit-border-radius: 5px; 
+	 border: 2px solid #800000;
+ }
+     #urgent a, #urgent a:hover{color:white; 
+		 }
+
+		 .urgent-mild{
+			 span{
+			 letter-spacing:0.1em !important;}
+			 margin-left:0 !important;
+			 margin-top:1em!important;
+			 font-size:1.1em !important
+		 }
+
+
+/*photo gallery*/
+.gallery{
+	.clearfix;
+	@media (min-width: @screen-md-min) {
+	
+	background:@gray05 !important;
+	}
+	margin-bottom:2em !important;
+	.gallery_photo{	
+		padding-bottom:1em;
+		@media (max-width: @screen-sm-max){		
+			padding-bottom:0;
+		}
+
+	/* bug? for narrow screen
+	.make-xs-column(12);
+	.make-sm-column(12);*/
+	.make-md-column(3);
+	.make-lg-column(3);
+	a{color:@gray70;}
+		h5{
+			width:100%;
+			margin-bottom:0.5em !important;
+			font-size:0.9em;
+			font-weight:normal;
+			margin-top:1em!important;
+			
+			@media (max-width: @screen-sm-max){		
+				&:after{
+					content:"写真";
+					.btn;
+					.btn-default;
+					.btn-sm;
+					margin-left:1em	;
+					padding-bottom:0 !important;
+					padding:0.2em 0.8em;
+				}	
+			}
+		}
+	
+		a{
+			position:relative !important;
+			&:after{
+				@media (min-width: @screen-md-max) {
+					content:url(../images/zoom.png);
+				position:absolute !important;
+				right:-9.5em;
+				bottom:-8.5em;
+				height:1em;
+				
+				@media (min-width: @screen-sm-max) and (max-width: @screen-md-max){
+					right:-7.5em;
+					bottom:-7em;
+				}
+			}
+			}	
+		}
+	}
+	
+	img{
+		@media (max-width: @screen-sm-max){
+			display:none;
+		}
+	}
+}
+
