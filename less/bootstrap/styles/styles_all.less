@@ -1,7 +1,7 @@
 @import "../type.less";
 @import "../sticky-footer.less"; 
 @import "../button-groups.less"; 
-@import "../carousel.less";
+/*@import "../carousel.less";*/
 @import "../bootstrap-social.less";/*Facebook button*/
 @import "../view_test.less";/* remove after test is done*/
 @import "../glyphicons.less"; 
@@ -1208,6 +1208,7 @@ sepalate from navbar. watch 'cause self-customize */
 		}
 	}
 }
+
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img { //dont't marge to others
   display: inline !important;
@@ -1219,15 +1220,36 @@ sepalate from navbar. watch 'cause self-customize */
 		height:@carousel-height-xsmall;
     }
 }
+
+.carousel-caption-wrapper{
+	position:relative;
+	width:1171px;
+	margin-right:auto;
+	margin-left:auto;
+}		
+	
+
+
+
+
 .carousel-caption{
+	position:absolute;
+	left:5%;	
 	padding:0;
-	left:40%  !important;
-	top:37% !important;
-    @media(max-width: @screen-xs) { //for mobile
-		top:0!important;
-		right:0 !important;
+	top:15em !important;
+	
+	
+    @media(max-width: @screen-sm) { //for mobile
+		top:10em!important;
+	    @media(max-width: @screen-xs) {
+			 //for mobile
+			top:5em!important;
+			/*right:0 !important;*/
+	    }
+		/*right:0 !important;*/
     }
-	right:10%;
+	
+	/*right:10%;*/
 	bottom:0;
 	text-align:left !important;
 	em {
@@ -1274,8 +1296,8 @@ sepalate from navbar. watch 'cause self-customize */
 .carousel-caption {
 	margin-right:0.8em;
 	margin-left:0.8em;
-	top:28% !important;
-	left:0 !important;
+	/*top:28% !important;
+	left:0 !important;*/
 	em{
 		font-size:1.8em;
 		font-family:"Arial Black","Arial", Gadget, sans-serif !important;
