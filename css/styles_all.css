@@ -4353,6 +4353,9 @@ table th[class*="col-"] {
 /*gray*/
 /*components*/
 /*typography*/
+.bold {
+  font-weight: bold;
+}
 /*switch show or hide*/
 .show_xs_sm {
   display: none !important;
@@ -4780,6 +4783,39 @@ img {
   }
 }
 /* top page */
+.fb-like-box {
+  margin: 0 0 3em;
+}
+#fb-root {
+  display: none;
+}
+.fb_iframe_widget,
+.fb_iframe_widget span,
+.fb_iframe_widget span iframe[style] {
+  width: 100% !important;
+}
+.link_ul {
+  border-bottom: 1px dotted;
+  margin: 0 0.3em;
+}
+.topevents {
+  font-weight: bold!important;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em !important;
+}
+.topevents span {
+  font-weight: normal !important;
+}
+a.topinfo:link {
+  margin: 2em 0 !important;
+  font-weight: bold;
+  color: green !important;
+  background: none !important;
+  border: 1px solid green !important;
+}
+a.topinfo:link:hover {
+  background: #f5fdf3 !important;
+}
 .index .top_main {
   position: relative;
   min-height: 1px;
@@ -5045,6 +5081,11 @@ form .btn-xs {
 }
 /* top page */
 .index {
+  /*	.top_event{
+		a{
+			display:none !important;}
+	}*/
+
   /*information*/
 
   /*recommend*/
@@ -5115,9 +5156,6 @@ form .btn-xs {
 .index h2 span {
   font-size: 80%;
   margin-left: 0.8em;
-}
-.index .top_event a {
-  display: none !important;
 }
 .index .topinfo {
   color: #ffffff;
@@ -5881,6 +5919,12 @@ fieldset[disabled] .index h3 .closed:after.active {
 .about td:nth-child(1) {
   width: 7em;
 }
+/*event*/
+.event p a:not(.btn),
+.event td a:not(.btn) {
+  margin: 0 0.3em;
+  border-bottom: 1px dotted;
+}
 .event h5 {
   margin-top: 2em;
   margin-bottom: 1em;
@@ -5911,6 +5955,23 @@ fieldset[disabled] .index h3 .closed:after.active {
 .regional td:nth-child(1),
 .link td:nth-child(1) {
   width: 50%;
+}
+h5.h5_margin {
+  margin-top: 4em !important;
+}
+/*for list marker 1), 2) ...*/
+.jtudetail ol {
+  counter-reset: list;
+}
+.jtudetail ol > li {
+  list-style: none;
+  position: relative;
+}
+.jtudetail ol > li::before {
+  counter-increment: list;
+  content: counter(list, decimal) ") ";
+  position: absolute;
+  left: -1.4em;
 }
 /* calendar */
 .calendar .table > tbody > tr:hover > td,
