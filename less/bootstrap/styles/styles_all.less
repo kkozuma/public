@@ -137,6 +137,17 @@ p{
 	line-height:@line-height-computed;
 }
 
+
+p,td{
+	a:not(.btn){ //exclude buttons
+	 margin:0 0.3em;
+		border-bottom:1px dotted;
+	}
+	
+}
+
+
+
 .navbar-wrapper{
 .mobile{	
 	display:none;
@@ -605,7 +616,8 @@ a.topinfo:link{
 	text-align:left;
 }
 /*information*/
- .information{
+ .information{	border-bottom:1px solid #ddd;
+
      @media (max-width: @screen-xs-min) {
 		 height:500px !important;
 	 }
@@ -1561,3 +1573,88 @@ vertical-align: middle;}
 	.hidden-xs;
 	/*.hidden-sm;*/
 }
+
+/*.tokai_banner{
+	.make-md-column(8);
+	.make-md-column-offset(2) ;
+	margin-bottom:2em;
+	
+	.btn{border-radius:0.5em;
+		padding-top:0 !important;
+		padding-bottom:0!important;
+		padding-left:15% !important;
+		padding-right:2% !important;
+		
+		&:link{
+			background:#3daeff !important;
+			background-size:contain !important;
+			p{color:white;}
+		}
+		&:hover{
+			background:#89ceff !important;
+			background-size:contain !important;
+		}
+		p{	font-weight:bold;
+			text-align:left;
+			font-size:1em;
+			letter-spacing:0.05em;
+
+			margin:0.1em !important;
+			&:nth-child(2){
+			font-size:1.2em;
+			}
+			&:nth-child(3){
+				font-size:0.8em;
+				
+			text-align:right
+			}
+	}
+	}
+}*/
+
+
+
+
+
+.tokai_banner{
+	.make-md-column(8);
+	.make-md-column-offset(2) ;
+	margin-bottom:2em;
+	
+	.btn{border-radius:0.5em;
+		padding-top:0 !important;
+		padding-bottom:0!important;
+		padding-left:10% !important;
+		padding-right:2% !important;
+		
+		&:link{
+			background:url("../images/banner/tokai_banner.png") no-repeat center left  !important;
+			background-size: cover !important;
+			p{color:white;}
+		}
+		&:hover{
+			background:url("../images/banner/tokai_banner.png") no-repeat bottom left  !important;
+		}
+		p{	    text-shadow: 0 0 5px rgba(0,59,89, 0.6);
+
+
+
+font-weight:bold;
+			text-align:left;
+			font-size:1em;
+			letter-spacing:0.05em;
+
+			margin:0.1em !important;
+			&:nth-child(2){
+			font-size:1.4em;
+			}
+			&:nth-child(3){
+				font-size:0.8em;
+				
+			text-align:right
+			}
+	}
+	}
+}
+
+	

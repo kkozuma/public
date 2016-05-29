@@ -4518,6 +4518,11 @@ h5 span:before {
 p {
   line-height: 20px;
 }
+p a:not(.btn),
+td a:not(.btn) {
+  margin: 0 0.3em;
+  border-bottom: 1px dotted;
+}
 .navbar-wrapper .mobile {
   display: none;
   margin-right: -15px !important;
@@ -5202,6 +5207,7 @@ fieldset[disabled] .index .topinfo.active {
   background-color: #ffffff;
 }
 .index .information {
+  border-bottom: 1px solid #ddd;
   height: 700px !important;
   margin-bottom: 5em;
   overflow-y: scroll !important;
@@ -6941,4 +6947,91 @@ img {
   .pc {
     display: none !important;
   }
+}
+/*.tokai_banner{
+	.make-md-column(8);
+	.make-md-column-offset(2) ;
+	margin-bottom:2em;
+	
+	.btn{border-radius:0.5em;
+		padding-top:0 !important;
+		padding-bottom:0!important;
+		padding-left:15% !important;
+		padding-right:2% !important;
+		
+		&:link{
+			background:#3daeff !important;
+			background-size:contain !important;
+			p{color:white;}
+		}
+		&:hover{
+			background:#89ceff !important;
+			background-size:contain !important;
+		}
+		p{	font-weight:bold;
+			text-align:left;
+			font-size:1em;
+			letter-spacing:0.05em;
+
+			margin:0.1em !important;
+			&:nth-child(2){
+			font-size:1.2em;
+			}
+			&:nth-child(3){
+				font-size:0.8em;
+				
+			text-align:right
+			}
+	}
+	}
+}*/
+.tokai_banner {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 2em;
+}
+@media (min-width: 992px) {
+  .tokai_banner {
+    float: left;
+    width: 66.66666666666666%;
+  }
+}
+@media (min-width: 992px) {
+  .tokai_banner {
+    margin-left: 16.666666666666664%;
+  }
+}
+.tokai_banner .btn {
+  border-radius: 0.5em;
+  padding-top: 0 !important;
+  padding-bottom: 0!important;
+  padding-left: 10% !important;
+  padding-right: 2% !important;
+}
+.tokai_banner .btn:link {
+  background: url("../images/banner/tokai_banner.png") no-repeat center left !important;
+  background-size: cover !important;
+}
+.tokai_banner .btn:link p {
+  color: white;
+}
+.tokai_banner .btn:hover {
+  background: url("../images/banner/tokai_banner.png") no-repeat bottom left !important;
+}
+.tokai_banner .btn p {
+  text-shadow: 0 0 5px rgba(0, 59, 89, 0.6);
+  font-weight: bold;
+  text-align: left;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  margin: 0.1em !important;
+}
+.tokai_banner .btn p:nth-child(2) {
+  font-size: 1.4em;
+}
+.tokai_banner .btn p:nth-child(3) {
+  font-size: 0.8em;
+  text-align: right;
 }
