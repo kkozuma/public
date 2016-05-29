@@ -5054,7 +5054,7 @@ form .btn-xs {
 }
 @media (min-width: 992px) {
   .navbar_lower .navbar-nav li {
-    width: 18%;
+    width: 15%;
   }
 }
 .navbar_lower .navbar-nav .active {
