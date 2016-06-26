@@ -290,8 +290,7 @@
   content: "\e030";
 }
 .glyphicon-refresh:before {
-  content: "\e031";
-}
+  content: "\e031";}
 .glyphicon-list-alt:before {
   content: "\e032";
 }
@@ -1863,8 +1862,7 @@ input[type="button"].btn-block {
 .navbar-default .navbar-nav > li > a {
   color: #777777;
 }
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
+.navbar-default .navbar-nav > li > a:hover,.navbar-default .navbar-nav > li > a:focus {
   color: #333333;
   background-color: transparent;
 }
@@ -2364,8 +2362,7 @@ output {
 .form-control[readonly],
 fieldset[disabled] .form-control {
   cursor: not-allowed;
-  background-color: #eeeeee;
-  opacity: 1;
+  background-color: #eeeeee;  opacity: 1;
 }
 textarea.form-control {
   height: auto;
@@ -2998,8 +2995,7 @@ table th[class*="col-"] {
   padding: 0.3em 0.5em;
   margin: 0 0.5em 1em;
   border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;  -webkit-border-radius: 5px;
   border: 2px solid #800000;
 }
 #urgent a,
@@ -3737,8 +3733,7 @@ form .btn-xs {
   color: #ffffff !important;
 }
 @media (max-width: 480px) {
-  .navbar-brand {
-    font-size: 1em !important;
+  .navbar-brand {    font-size: 1em !important;
   }
 }
 .navbar-brand span {
@@ -4017,8 +4012,7 @@ fieldset[disabled] .index .accepting:after {
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 .index .accepting:after.disabled,
-.index .accepting:after[disabled],
-fieldset[disabled] .index .accepting:after {
+.index .accepting:after[disabled],fieldset[disabled] .index .accepting:after {
   cursor: not-allowed;
   pointer-events: none;
   opacity: 0.65;
@@ -4434,8 +4428,7 @@ fieldset[disabled] .index .fixed:after.active {
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .index .local_mobile {
-    display: block !important;
-  }
+    display: block !important;  }
   table.index .local_mobile {
     display: table;
   }
@@ -5079,8 +5072,7 @@ sepalate from navbar. watch 'cause self-customize */
   table.carousel {
     display: table;
   }
-  tr.carousel {
-    display: table-row !important;
+  tr.carousel {    display: table-row !important;
   }
   th.carousel,
   td.carousel {

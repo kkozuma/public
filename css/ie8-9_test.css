@@ -313,8 +313,7 @@ blockquote .small {
   line-height: 1.428571429;
   color: #999999;
 }
-blockquote footer:before,
-blockquote small:before,
+blockquote footer:before,blockquote small:before,
 blockquote .small:before {
   content: '\2014 \00A0';
 }
@@ -547,8 +546,7 @@ body {
   display: table;
 }
 .btn-group-vertical > .btn-group:after {
-  clear: both;
-}
+  clear: both;}
 .btn-group-vertical > .btn-group > .btn {
   float: none;
 }
@@ -1281,8 +1279,7 @@ fieldset[disabled] .btn-instagram.active {
 }
 .btn-linkedin:hover,
 .btn-linkedin:focus,
-.btn-linkedin:active,
-.btn-linkedin.active,
+.btn-linkedin:active,.btn-linkedin.active,
 .open .dropdown-toggle.btn-linkedin {
   color: #ffffff;
   background-color: #005f8d;
@@ -3142,8 +3139,7 @@ input[type="button"].btn-block {
   border-top-left-radius: 0;
 }
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;  border-bottom-left-radius: 0;
 }
 .navbar-btn {
   margin-top: 2px;
@@ -3607,8 +3603,7 @@ legend {
   font-size: 21px;
   line-height: inherit;
   color: #333333;
-  border: 0;
-  border-bottom: 1px solid #e5e5e5;
+  border: 0;  border-bottom: 1px solid #e5e5e5;
 }
 label {
   display: inline-block;
@@ -4616,8 +4611,7 @@ form .btn-xs {
   }
   tr.navbar.mobile {
     display: table-row !important;
-  }
-  th.navbar.mobile,
+  }  th.navbar.mobile,
   td.navbar.mobile {
     display: table-cell !important;
   }
@@ -5912,8 +5906,7 @@ fieldset[disabled] .index .fixed:after.active {
 }
 /*each pages stiles are added by javascript*/
 /* carousel
-sepalate from navbar. watch 'cause self-customize */
-.carousel {
+sepalate from navbar. watch 'cause self-customize */.carousel {
   background: #45841f;
   height: 436px;
   display: none !important;
@@ -6262,8 +6255,7 @@ sepalate from navbar. watch 'cause self-customize */
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .main_mobile {
-    display: block !important;
-  }
+    display: block !important;  }
   table.main_mobile {
     display: table;
   }
@@ -6977,8 +6969,7 @@ em {
   font-weight: bold;
 }
 .link_outer:after {
-  content: url(../images/icon_outerlink.png);
-  margin-right: 0.5em;
+  content: url(../images/icon_outerlink.png);  margin-right: 0.5em;
 }
 /*link_outer icon for table*/
 table .link_outer:after {
@@ -8151,8 +8142,7 @@ fieldset[disabled] .index .fixed:after.active {
 }
 .calendar .table tr td:nth-child(1) {
   background: #e6e6e6 !important;
-  width: 4em;
-  text-align: left;
+  width: 4em;  text-align: left;
   font-weight: bold;
   padding-left: 0 !important;
   padding-right: 0 !important;

@@ -755,8 +755,7 @@ th {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  padding: 8px;
-  line-height: 1.428571429;
+  padding: 8px;  line-height: 1.428571429;
   vertical-align: top;
   border-top: 1px solid #dddddd;
 }
@@ -1839,8 +1838,7 @@ input[type="button"].btn-block {
 }
 .glyphicon-upload:before {
   content: "\e027";
-}
-.glyphicon-inbox:before {
+}.glyphicon-inbox:before {
   content: "\e028";
 }
 .glyphicon-play-circle:before {
@@ -2078,8 +2076,7 @@ input[type="button"].btn-block {
   content: "\e110";
 }
 .glyphicon-comment:before {
-  content: "\e111";
-}
+  content: "\e111";}
 .glyphicon-magnet:before {
   content: "\e112";
 }
@@ -2254,8 +2251,7 @@ input[type="button"].btn-block {
 .glyphicon-export:before {
   content: "\e170";
 }
-.glyphicon-send:before {
-  content: "\e171";
+.glyphicon-send:before {  content: "\e171";
 }
 .glyphicon-floppy-disk:before {
   content: "\e172";
@@ -2525,8 +2521,7 @@ input[type="button"].btn-block {
   content: " ";
   display: table;
 }
-.btn-toolbar:after {
-  clear: both;
+.btn-toolbar:after {  clear: both;
 }
 .btn-toolbar .btn-group,
 .btn-toolbar .input-group {
@@ -3694,8 +3689,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .pager:before,
 .pager:after {
-  content: " ";
-  display: table;
+  content: " ";  display: table;
 }
 .pager:after {
   clear: both;
@@ -4569,8 +4563,7 @@ a.list-group-item-danger.active:focus {
 }
 .close:hover,
 .close:focus {
-  color: #000000;
-  text-decoration: none;
+  color: #000000;  text-decoration: none;
   cursor: pointer;
   opacity: 0.5;
   filter: alpha(opacity=50);
@@ -5653,8 +5646,7 @@ body {
 .btn-group-vertical > .btn-group:after {
   clear: both;
 }
-.btn-group-vertical > .btn-group > .btn {
-  float: none;
+.btn-group-vertical > .btn-group > .btn {  float: none;
 }
 .btn-group-vertical > .btn + .btn,
 .btn-group-vertical > .btn + .btn-group,
