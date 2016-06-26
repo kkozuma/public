@@ -543,6 +543,10 @@ a.topinfo:link{
 	 		text-align:center;
 	 		font-size:0.9em;
 	 		border-right:1px solid @brand-primary-light;
+			
+			&.noborder{/*ナビ 最後は緑に白線なし*/
+				border:none;
+			}
 	         @media(max-width: @screen-xs) { //for mobile
 	 		 border:white solid 1px;
 	         }
@@ -558,17 +562,17 @@ a.topinfo:link{
 	 	    li{
 	 	   	width:100%;
 	         @media(min-width: @screen-desktop) {
-	           width:15%;
+	           width:17.5%; /*navigation width*/
 	        	 }
 	 	   }
 	 	   .active{
 	 		   width:100%;
 	            @media(min-width: @screen-desktop) {
-	 			   width:10%;
+	 			   width:13%; /*navigation no children*/
 	            }
-	 		   a{
+	 		   /*a{
 	 			   background:darken(@brand-primary,5)
-	 		   }
+	 		   }*/
 	 	   }
 	 	}
 	 	.dropdown-menu{ 
@@ -825,11 +829,19 @@ h3 .closed:after{
  	}
  h2{
  	.half-round_title !important;
+	clear:both;
+	
  	}
+	h2+h4{margin-top:0.5em !important; // h4 immediately after h2
+	}
+	
  h4{
  	margin-top:2em;
  	.title_with_line;
+	
  	}
+	
+	
  h4.before_table{
  	margin-bottom:-1em !important;
 }
@@ -878,9 +890,8 @@ h3 .closed:after{
 		}
 	}
 }
-
-/*event*/
-.event{
+/*event,.development*/
+.event,.development{
 	p,td{
 		a:not(.btn){ //exclude buttons
 		 margin:0 0.3em;
@@ -949,7 +960,9 @@ h3 .closed:after{
 	    content: counter(list, decimal) ") ";
 	    position: absolute;
 	    left: -1.4em;
-	}    
+	}  
+	  
+	  
 
 
 /* calendar */
@@ -1650,11 +1663,139 @@ font-weight:bold;
 			}
 			&:nth-child(3){
 				font-size:0.8em;
-				
-			text-align:right
+				text-align:right
 			}
 	}
 	}
 }
 
+/*強化選手*/
+.development{
+	#accordion-container{
+		h2 {
+			margin-top:2em !important
+		}
+		h5{
+			margin-top:1em !important
+			
+		}
+	}
+}
+.develop-wrap{
+	.make-row();
+	padding:0 1em !important;
+	margin-bottom:2em !important;
+}
+.junior_players-wrapper{
+	.make-xs-column(12);
+	.make-sm-column(12);
+	.make-md-column(6);
+ 	.make-lg-column(3);
+	font-size:0.85em
+}
+.junior_players{	
+	.clearfix;
+	border-radius: @border-radius-base;
+	margin:0.2em -1em !important;
+	padding:1em 0.5em !important;
+	background:@gray05 !important;
 	
+	p{
+		text-align:center ;
+		img{
+			display:inline;
+		}
+		.make-xs-column(5);
+		.make-sm-column(5);
+	 	.make-md-column(12);
+	 	.make-lg-column(12);
+	}
+	div{ /*選手項目*/
+	    @media (max-width: @screen-sm-max) {
+			margin-top:3em;
+			border:none !important;
+		}
+	    @media (max-width: @screen-md-max) {
+			.make-md-column-offset(1);
+		}
+		.make-xs-column(3);
+		.make-sm-column(3);
+	 	.make-md-column(4);
+	 	.make-lg-column(4);
+		
+		padding:0.3em 0  !important;
+		font-weight:bold;
+		border-top:1px solid @gray20;
+		/*border-bottom:1px solid @gray20;*/
+		color:@gray;
+		&:last-child{ /*選手記述*/
+			.make-xs-column(4);
+			.make-sm-column(4);
+		 	.make-md-column(6);
+		 	.make-lg-column(8);
+			color:black;
+			font-weight:normal;
+			padding-left:1em !important
+		}
+	}
+}
+
+/*vallenato(toggle accordion)*/
+
+#accordion-container {
+}
+
+.accordion_indication{
+	content:"↓ 詳細を表示";
+	margin-left:0.2em;
+	font-weight:normal;
+	color:@brand-danger;
+	color:white;
+	/*&:link {
+		color:red
+	}
+	&:hover {
+		color:red !important;
+	}
+	border:1px solid @brand-danger;*/
+	padding:0.2em 0.5em;
+ 	border-radius: @border-radius-base;
+	font-size:0.8em;
+	background:lighten(@brand-primary,10%);
+	width:10em !important
+}
+
+.accordion-header {
+	margin-top:2em !important;
+	cursor: pointer;
+	&:after{
+		.accordion_indication;
+		/*&:hover {		color:red !important;
+		}*/
+	}
+	/*&:hover {
+		color:red !important;
+	}
+	*/
+}
+
+.active-header {
+	&:after{
+		.accordion_indication;
+		content:"↑ 詳細を隠す";
+		background:lighten(@brand-primary,20%);
+		
+	}
+	&:hover {
+	}
+}
+
+
+.inactive-header {
+	&:hover {
+	}
+}
+
+.accordion-content {
+	display: none;
+}
