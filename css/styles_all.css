@@ -313,7 +313,8 @@ blockquote .small {
   line-height: 1.428571429;
   color: #999999;
 }
-blockquote footer:before,blockquote small:before,
+blockquote footer:before,
+blockquote small:before,
 blockquote .small:before {
   content: '\2014 \00A0';
 }
@@ -546,7 +547,8 @@ body {
   display: table;
 }
 .btn-group-vertical > .btn-group:after {
-  clear: both;}
+  clear: both;
+}
 .btn-group-vertical > .btn-group > .btn {
   float: none;
 }
@@ -2330,7 +2332,8 @@ fieldset[disabled] .btn {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.btn-default {  color: #000000;
+.btn-default {
+  color: #000000;
   background-color: #ffffff;
   border-color: #cccccc;
 }
@@ -3916,7 +3919,8 @@ th {
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
   padding: 8px;
-  line-height: 1.428571429;  vertical-align: top;
+  line-height: 1.428571429;
+  vertical-align: top;
   border-top: 1px solid #dddddd;
 }
 .table > thead > tr > th {
@@ -4592,7 +4596,8 @@ fieldset[disabled] .navbar-wrapper .mobile button.active {
 .navbar-wrapper .mobile .navbar-toggle {
   padding: 0.1em 0.6em;
 }
-@media (max-width: 480px) {  .navbar-wrapper .mobile .navbar-toggle {
+@media (max-width: 480px) {
+  .navbar-wrapper .mobile .navbar-toggle {
     font-size: 0.6em;
     margin: 0.9em 0 !important;
     height: 15px;
@@ -5030,6 +5035,11 @@ form .btn-xs {
   font-size: 0.9em;
   border-right: 1px solid #71ad29;
 }
+.navbar_lower .dropdown-toggle.noborder {
+  /*ナビ 最後は緑に白線なし*/
+
+  border: none;
+}
 @media (max-width: 480px) {
   .navbar_lower .dropdown-toggle {
     border: white solid 1px;
@@ -5049,19 +5059,24 @@ form .btn-xs {
 }
 @media (min-width: 992px) {
   .navbar_lower .navbar-nav li {
-    width: 18%;
+    width: 17.5%;
+    /*navigation width*/
+  
   }
 }
 .navbar_lower .navbar-nav .active {
   width: 100%;
+  /*a{
+	 			   background:darken(@brand-primary,5)
+	 		   }*/
+
 }
 @media (min-width: 992px) {
   .navbar_lower .navbar-nav .active {
-    width: 10%;
+    width: 13%;
+    /*navigation no children*/
+  
   }
-}
-.navbar_lower .navbar-nav .active a {
-  background: #3a6f1a;
 }
 .navbar_lower .dropdown-menu {
   min-width: 100% !important;
@@ -5866,6 +5881,10 @@ fieldset[disabled] .index h3 .closed:after.active {
   font-size: 18px;
   padding: 5px;
   border-radius: 4px 4px 0 0;
+  clear: both;
+}
+.sub h2 + h4 {
+  margin-top: 0.5em !important;
 }
 .sub h4 {
   margin-top: 2em;
@@ -5920,29 +5939,45 @@ fieldset[disabled] .index h3 .closed:after.active {
 .about td:nth-child(1) {
   width: 7em;
 }
-/*event*/
+/*event,.development*/
 .event p a:not(.btn),
-.event td a:not(.btn) {
+.development p a:not(.btn),
+.development_archived2015 p a:not(.btn),
+.event td a:not(.btn),
+.development td a:not(.btn),
+.development_archived2015 td a:not(.btn) {
   margin: 0 0.3em;
   border-bottom: 1px dotted;
 }
-.event h5 {
+.event h5,
+.development h5,
+.development_archived2015 h5 {
   margin-top: 2em;
   margin-bottom: 1em;
 }
-.event h5 a:before {
+.event h5 a:before,
+.development h5 a:before,
+.development_archived2015 h5 a:before {
   content: "";
 }
-.event .finish {
+.event .finish,
+.development .finish,
+.development_archived2015 .finish {
   margin-bottom: 3em;
 }
-.event h2 {
+.event h2,
+.development h2,
+.development_archived2015 h2 {
   margin-top: 3em;
 }
-.event h2:first-child {
+.event h2:first-child,
+.development h2:first-child,
+.development_archived2015 h2:first-child {
   margin-top: 20px !important;
 }
-.event td:first-child {
+.event td:first-child,
+.development td:first-child,
+.development_archived2015 td:first-child {
   width: 10em;
 }
 .result td {
@@ -7029,4 +7064,319 @@ img {
 .tokai_banner .btn p:nth-child(3) {
   font-size: 0.8em;
   text-align: right;
+}
+/*強化選手*/
+.development #accordion-container h2,
+.development_archived2015 #accordion-container h2 {
+  margin-top: 2em !important;
+}
+.development #accordion-container h5,
+.development_archived2015 #accordion-container h5 {
+  margin-top: 1em !important;
+}
+.development #accordion-container li h5,
+.development_archived2015 #accordion-container li h5 {
+  font-weight: normal!important;
+}
+.develop-wrap {
+  margin-left: -15px;
+  margin-right: -15px;
+  padding: 0 1em !important;
+  margin-bottom: 2em !important;
+}
+.develop-wrap:before,
+.develop-wrap:after {
+  content: " ";
+  display: table;
+}
+.develop-wrap:after {
+  clear: both;
+}
+.develop-wrap:before,
+.develop-wrap:after {
+  content: " ";
+  display: table;
+}
+.develop-wrap:after {
+  clear: both;
+}
+.junior_players-wrapper {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 0.85em;
+}
+@media (min-width: 768px) {
+  .junior_players-wrapper {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .junior_players-wrapper {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .junior_players-wrapper {
+    float: left;
+    width: 25%;
+  }
+}
+.junior_players {
+  border-radius: 4px;
+  margin: 0.2em -1em !important;
+  padding: 1em 0.5em !important;
+  background: #f2f2f2 !important;
+}
+.junior_players:before,
+.junior_players:after {
+  content: " ";
+  display: table;
+}
+.junior_players:after {
+  clear: both;
+}
+.junior_players:before,
+.junior_players:after {
+  content: " ";
+  display: table;
+}
+.junior_players:after {
+  clear: both;
+}
+.junior_players p {
+  text-align: center ;
+  float: left;
+  width: 41.66666666666667%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.junior_players p img {
+  display: inline;
+}
+@media (min-width: 768px) {
+  .junior_players p {
+    float: left;
+    width: 41.66666666666667%;
+  }
+}
+@media (min-width: 992px) {
+  .junior_players p {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .junior_players p {
+    float: left;
+    width: 100%;
+  }
+}
+.junior_players div {
+  /*選手項目*/
+
+  float: left;
+  width: 25%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding: 0.3em 0  !important;
+  font-weight: bold;
+  border-top: 1px solid #cccccc;
+  /*border-bottom:1px solid @gray20;*/
+
+  color: #555555;
+}
+@media (max-width: 991px) {
+  .junior_players div {
+    margin-top: 3em;
+    border: none !important;
+  }
+}
+@media (max-width: 1199px) {
+  
+}
+@media (max-width: 1199px) and (min-width: 992px) {
+  .junior_players div {
+    margin-left: 8.333333333333332%;
+  }
+}
+@media (min-width: 768px) {
+  .junior_players div {
+    float: left;
+    width: 25%;
+  }
+}
+@media (min-width: 992px) {
+  .junior_players div {
+    float: left;
+    width: 33.33333333333333%;
+  }
+}
+@media (min-width: 1200px) {
+  .junior_players div {
+    float: left;
+    width: 41.66666666666667%;
+  }
+}
+.junior_players div:last-child {
+  /*選手記述*/
+
+  float: left;
+  width: 33.33333333333333%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: black;
+  font-weight: normal;
+  padding-left: 1em !important;
+}
+@media (min-width: 768px) {
+  .junior_players div:last-child {
+    float: left;
+    width: 33.33333333333333%;
+  }
+}
+@media (min-width: 992px) {
+  .junior_players div:last-child {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .junior_players div:last-child {
+    float: left;
+    width: 58.333333333333336%;
+  }
+}
+/*vallenato(toggle accordion)*/
+.accordion_indication {
+  content: "↓ 詳細を表示";
+  margin-left: 0.2em;
+  font-weight: normal;
+  color: #002ccc;
+  color: white;
+  /*&:link {
+		color:red
+	}
+	&:hover {
+		color:red !important;
+	}
+	border:1px solid @brand-danger;*/
+
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  font-size: 0.8em;
+  background: #5bad29;
+  width: 10em !important;
+}
+.accordion-header {
+  margin-top: 2em !important;
+  cursor: pointer;
+  /*&:hover {
+		color:red !important;
+	}
+	*/
+
+  line-height: 1.5;
+}
+.accordion-header:after {
+  content: "↓ 詳細を表示";
+  margin-left: 0.2em;
+  font-weight: normal;
+  color: #002ccc;
+  color: white;
+  /*&:link {
+		color:red
+	}
+	&:hover {
+		color:red !important;
+	}
+	border:1px solid @brand-danger;*/
+
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  font-size: 0.8em;
+  background: #5bad29;
+  width: 10em !important;
+  /*&:hover {		color:red !important;
+		}*/
+
+}
+.active-header:after {
+  content: "↓ 詳細を表示";
+  margin-left: 0.2em;
+  font-weight: normal;
+  color: #002ccc;
+  color: white;
+  /*&:link {
+		color:red
+	}
+	&:hover {
+		color:red !important;
+	}
+	border:1px solid @brand-danger;*/
+
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  font-size: 0.8em;
+  background: #5bad29;
+  width: 10em !important;
+  content: "↑ 詳細を隠す";
+  background: #72d039;
+}
+.accordion-content {
+  display: none;
+}
+/*アーカイブのページ*/
+.event_archived2015 h5,
+.event_archived2016 h5,
+.development_archived2015 h5 {
+  margin-top: 3em !important;
+  margin-bottom: 1em !important;
+}
+.event_archived2015 h5:not(.accordion-header):after,
+.event_archived2016 h5:not(.accordion-header):after,
+.development_archived2015 h5:not(.accordion-header):after {
+  content: "（終了）";
+}
+.event_archived2015 h2 + h5,
+.event_archived2016 h2 + h5,
+.development_archived2015 h2 + h5 {
+  margin-top: 1em !important;
+}
+.event_archived2015 td:first-child,
+.event_archived2016 td:first-child,
+.development_archived2015 td:first-child {
+  width: 9em;
+}
+.event_archived2015 .current,
+.event_archived2016 .current,
+.development_archived2015 .current {
+  color: #69F;
+  color: #990033;
+}
+.event_archived2015 .event_archive,
+.event_archived2016 .event_archive,
+.development_archived2015 .event_archive {
+  padding-left: 0 !important;
+}
+.event_archived2015 .event_archive li,
+.event_archived2016 .event_archive li,
+.development_archived2015 .event_archive li {
+  list-style: none;
+}
+.event_archived2015 .event_archive li a:before,
+.event_archived2016 .event_archive li a:before,
+.development_archived2015 .event_archive li a:before {
+  content: ">> ";
 }
