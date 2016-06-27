@@ -5942,34 +5942,42 @@ fieldset[disabled] .index h3 .closed:after.active {
 /*event,.development*/
 .event p a:not(.btn),
 .development p a:not(.btn),
+.development_archived2015 p a:not(.btn),
 .event td a:not(.btn),
-.development td a:not(.btn) {
+.development td a:not(.btn),
+.development_archived2015 td a:not(.btn) {
   margin: 0 0.3em;
   border-bottom: 1px dotted;
 }
 .event h5,
-.development h5 {
+.development h5,
+.development_archived2015 h5 {
   margin-top: 2em;
   margin-bottom: 1em;
 }
 .event h5 a:before,
-.development h5 a:before {
+.development h5 a:before,
+.development_archived2015 h5 a:before {
   content: "";
 }
 .event .finish,
-.development .finish {
+.development .finish,
+.development_archived2015 .finish {
   margin-bottom: 3em;
 }
 .event h2,
-.development h2 {
+.development h2,
+.development_archived2015 h2 {
   margin-top: 3em;
 }
 .event h2:first-child,
-.development h2:first-child {
+.development h2:first-child,
+.development_archived2015 h2:first-child {
   margin-top: 20px !important;
 }
 .event td:first-child,
-.development td:first-child {
+.development td:first-child,
+.development_archived2015 td:first-child {
   width: 10em;
 }
 .result td {
@@ -7058,11 +7066,17 @@ img {
   text-align: right;
 }
 /*強化選手*/
-.development #accordion-container h2 {
+.development #accordion-container h2,
+.development_archived2015 #accordion-container h2 {
   margin-top: 2em !important;
 }
-.development #accordion-container h5 {
+.development #accordion-container h5,
+.development_archived2015 #accordion-container h5 {
   margin-top: 1em !important;
+}
+.development #accordion-container li h5,
+.development_archived2015 #accordion-container li h5 {
+  font-weight: normal!important;
 }
 .develop-wrap {
   margin-left: -15px;
@@ -7210,7 +7224,7 @@ img {
 @media (min-width: 1200px) {
   .junior_players div {
     float: left;
-    width: 33.33333333333333%;
+    width: 41.66666666666667%;
   }
 }
 .junior_players div:last-child {
@@ -7241,7 +7255,7 @@ img {
 @media (min-width: 1200px) {
   .junior_players div:last-child {
     float: left;
-    width: 66.66666666666666%;
+    width: 58.333333333333336%;
   }
 }
 /*vallenato(toggle accordion)*/
@@ -7273,6 +7287,7 @@ img {
 	}
 	*/
 
+  line-height: 1.5;
 }
 .accordion-header:after {
   content: "↓ 詳細を表示";
@@ -7321,4 +7336,47 @@ img {
 }
 .accordion-content {
   display: none;
+}
+/*アーカイブのページ*/
+.event_archived2015 h5,
+.event_archived2016 h5,
+.development_archived2015 h5 {
+  margin-top: 3em !important;
+  margin-bottom: 1em !important;
+}
+.event_archived2015 h5:not(.accordion-header):after,
+.event_archived2016 h5:not(.accordion-header):after,
+.development_archived2015 h5:not(.accordion-header):after {
+  content: "（終了）";
+}
+.event_archived2015 h2 + h5,
+.event_archived2016 h2 + h5,
+.development_archived2015 h2 + h5 {
+  margin-top: 1em !important;
+}
+.event_archived2015 td:first-child,
+.event_archived2016 td:first-child,
+.development_archived2015 td:first-child {
+  width: 9em;
+}
+.event_archived2015 .current,
+.event_archived2016 .current,
+.development_archived2015 .current {
+  color: #69F;
+  color: #990033;
+}
+.event_archived2015 .event_archive,
+.event_archived2016 .event_archive,
+.development_archived2015 .event_archive {
+  padding-left: 0 !important;
+}
+.event_archived2015 .event_archive li,
+.event_archived2016 .event_archive li,
+.development_archived2015 .event_archive li {
+  list-style: none;
+}
+.event_archived2015 .event_archive li a:before,
+.event_archived2016 .event_archive li a:before,
+.development_archived2015 .event_archive li a:before {
+  content: ">> ";
 }
