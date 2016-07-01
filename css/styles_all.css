@@ -4656,6 +4656,9 @@ a:focus {
 .pdf:after {
   content: url(../images/icon_pdf.png);
 }
+.fa-angle-double-right {
+  color: #45841f !important;
+}
 em {
   text-decoration: none;
   font-style: normal;
@@ -5102,6 +5105,8 @@ form .btn-xs {
 
   /*don't include below into .index! something conflict*/
 
+  /*登録*/
+
   /* top navi right */
 }
 .index .top_main {
@@ -5201,24 +5206,58 @@ fieldset[disabled] .index .topinfo.active {
   background-color: #ffffff;
 }
 .index .information {
-  border: 1px solid #ddd;
-  height: 300px !important;
-  margin-bottom: 1em;
-  overflow-y: scroll !important;
+  /*border:1px solid #ddd;*/
+
+  /*height:300px !important;*/
+
+  margin-bottom: 1.5em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px dotted #cccccc;
+  margin-right: 1em;
+  /*overflow-y:scroll !important;*/
+
+}
+.index .information h3,
+.index .information p {
+  display: inline;
+}
+.index .information i {
+  color: #002ccc;
+}
+.index .information i:hover {
+  color: #002199;
+}
+.index .information p {
+  /*display:block;*/
+
+  line-height: 1.2 !important;
+  /*&:before{
+			 content:"  →"
+		 }*/
+
 }
 @media (max-width: 480px) {
   .index .information {
     height: 500px !important;
   }
 }
+.index .information table {
+  margin-top: 0;
+  overflow: hidden;
+}
+.index .information td[colspan="2"] {
+  font-size: 0.9em;
+  text-align: right;
+}
 .index .information td {
-  padding: 0.5em 0.5em 0.2em 0.5em;
-  /**/
-  border-bottom: #e6e6e6 dotted 1px;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  /*border-bottom:@gray10 dotted 1px;*/
+
   line-height: 1.6;
 }
 .index .information td p {
   margin-bottom: 0.2em;
+  line-height: 1 !;
 }
 .index .information td:nth-child(1) {
   font-family: "Arial Black", Arial, Gadget, sans-serif !important;
@@ -5667,6 +5706,19 @@ fieldset[disabled] .index h3 .closed:after.active {
   padding: 2px 0 2px 20px;
   background: url("../images/marker_recommend.png") left 50% no-repeat !important;
 }
+.index .top_registration {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 20em;
+}
+@media (min-width: 1200px) {
+  .index .top_registration {
+    float: left;
+    width: 33.33333333333333%;
+  }
+}
 @media (max-width: 767px) {
   .index .local {
     display: none !important;
@@ -5826,8 +5878,11 @@ fieldset[disabled] .index h3 .closed:after.active {
   width: 10em;
 }
 /*infoカテゴリ別*/
+/*@info_event:saturate(spin(#02ec81, 30), 30%);
+@info_development:saturate(spin(#02ec81, 100), 40%);
+@info_tmtu:saturate(spin(#02ec81, 10), 90%);*/
 .title_eachtitle {
-  margin: 0 0  0.5em 0 !important;
+  margin: 0 0 0.2em 0 !important;
   border: none!important;
   padding: 0;
 }
@@ -5839,12 +5894,12 @@ fieldset[disabled] .index h3 .closed:after.active {
   padding: 0.25em 0.5em;
 }
 .info_event h2 {
-  margin: 0 0  0.5em 0 !important;
+  margin: 0 0 0.2em 0 !important;
   border: none!important;
   padding: 0;
 }
 .info_event h2 span {
-  background: red !important;
+  background: #58e4c7;
   font-size: 0.8em;
   border-radius: 4px;
   color: white;
@@ -5852,12 +5907,12 @@ fieldset[disabled] .index h3 .closed:after.active {
   padding: 0.25em 0.5em;
 }
 .info_development h2 {
-  margin: 0 0  0.5em 0 !important;
+  margin: 0 0 0.2em 0 !important;
   border: none!important;
   padding: 0;
 }
 .info_development h2 span {
-  background: #3200ee;
+  background: #585ee4;
   font-size: 0.8em;
   border-radius: 4px;
   color: white;
@@ -5865,12 +5920,38 @@ fieldset[disabled] .index h3 .closed:after.active {
   padding: 0.25em 0.5em;
 }
 .info_tmtu h2 {
-  margin: 0 0  0.5em 0 !important;
+  margin: 0 0 0.2em 0 !important;
   border: none!important;
   padding: 0;
 }
 .info_tmtu h2 span {
-  background: #00eea9;
+  background: #e458d3;
+  font-size: 0.8em;
+  border-radius: 4px;
+  color: white;
+  margin-left: 0;
+  padding: 0.25em 0.5em;
+}
+.info_register h2 {
+  margin: 0 0 0.2em 0 !important;
+  border: none!important;
+  padding: 0;
+}
+.info_register h2 span {
+  background: #e48158;
+  font-size: 0.8em;
+  border-radius: 4px;
+  color: white;
+  margin-left: 0;
+  padding: 0.25em 0.5em;
+}
+.info_reveal h2 {
+  margin: 0 0 0.2em 0 !important;
+  border: none!important;
+  padding: 0;
+}
+.info_reveal h2 span {
+  background: #a4e458;
   font-size: 0.8em;
   border-radius: 4px;
   color: white;
