@@ -5206,7 +5206,11 @@ fieldset[disabled] .index .topinfo.active {
   background-color: #ffffff;
 }
 .index .information {
-  /*border:1px solid #ddd;*/
+  /*border:1px solid #ddd;
+
+     @media (max-width: @screen-xs-min) {
+		 height:500px !important;
+	 }*/
 
   /*height:300px !important;*/
 
@@ -5235,11 +5239,6 @@ fieldset[disabled] .index .topinfo.active {
 			 content:"  →"
 		 }*/
 
-}
-@media (max-width: 480px) {
-  .index .information {
-    height: 500px !important;
-  }
 }
 .index .information table {
   margin-top: 0;
