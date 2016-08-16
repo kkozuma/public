@@ -5096,11 +5096,6 @@ form .btn-xs {
 }
 /* top page */
 .index {
-  /*	.top_event{
-		a{
-			display:none !important;}
-	}*/
-
   /*information*/
 
   /*recommend*/
@@ -5161,17 +5156,6 @@ form .btn-xs {
     width: 33.33333333333333%;
   }
 }
-.index h2 {
-  color: #45841f;
-  border-top: 3px solid #45841f;
-  border-bottom: 2px dotted #333333;
-  padding: 0.25em 0.5em;
-  font-size: 16px;
-}
-.index h2 span {
-  font-size: 80%;
-  margin-left: 0.8em;
-}
 .index .topinfo {
   color: #ffffff;
   background-color: #5da333;
@@ -5217,9 +5201,8 @@ fieldset[disabled] .index .topinfo.active {
   background-color: #ffffff;
 }
 .index .information {
-  border-bottom: 1px solid #ddd;
-  height: 700px !important;
-  margin-bottom: 5em;
+  height: 600px !important;
+  margin-bottom: 1em;
   overflow-y: scroll !important;
 }
 @media (max-width: 480px) {
@@ -5229,8 +5212,12 @@ fieldset[disabled] .index .topinfo.active {
 }
 .index .information td {
   padding: 0.5em 0.5em 0.2em 0.5em;
-  border-bottom: #555555 dotted 1px;
+  /**/
+  border-bottom: #e6e6e6 dotted 1px;
   line-height: 1.6;
+}
+.index .information td p {
+  margin-bottom: 0.2em;
 }
 .index .information td:nth-child(1) {
   font-family: "Arial Black", Arial, Gadget, sans-serif !important;
@@ -5256,8 +5243,8 @@ fieldset[disabled] .index .topinfo.active {
 .index .information td .btn-sm {
   color: #333333;
   background: #f2f2f2;
-  margin-top: 0.4em;
-  padding: 0.2em 1em;
+  margin: 0em;
+  padding: 0.1em 0.5em;
 }
 .index .information td .btn-sm:hover {
   background: #e6e6e6;
@@ -5837,6 +5824,58 @@ fieldset[disabled] .index h3 .closed:after.active {
 .table_noborder td:first-child {
   width: 10em;
 }
+/*infoカテゴリ別*/
+.title_eachtitle {
+  margin: 0 0  0.5em 0 !important;
+  border: none!important;
+  padding: 0;
+}
+.title_eachinfo {
+  font-size: 0.8em;
+  border-radius: 4px;
+  color: white;
+  margin-left: 0;
+  padding: 0.25em 0.5em;
+}
+.info_event h2 {
+  margin: 0 0  0.5em 0 !important;
+  border: none!important;
+  padding: 0;
+}
+.info_event h2 span {
+  background: red !important;
+  font-size: 0.8em;
+  border-radius: 4px;
+  color: white;
+  margin-left: 0;
+  padding: 0.25em 0.5em;
+}
+.info_development h2 {
+  margin: 0 0  0.5em 0 !important;
+  border: none!important;
+  padding: 0;
+}
+.info_development h2 span {
+  background: #3200ee;
+  font-size: 0.8em;
+  border-radius: 4px;
+  color: white;
+  margin-left: 0;
+  padding: 0.25em 0.5em;
+}
+.info_tmtu h2 {
+  margin: 0 0  0.5em 0 !important;
+  border: none!important;
+  padding: 0;
+}
+.info_tmtu h2 span {
+  background: #00eea9;
+  font-size: 0.8em;
+  border-radius: 4px;
+  color: white;
+  margin-left: 0;
+  padding: 0.25em 0.5em;
+}
 /* sub pages */
 .sub {
   /* sub pages right navigation */
@@ -5942,42 +5981,34 @@ fieldset[disabled] .index h3 .closed:after.active {
 /*event,.development*/
 .event p a:not(.btn),
 .development p a:not(.btn),
-.development_archived2015 p a:not(.btn),
 .event td a:not(.btn),
-.development td a:not(.btn),
-.development_archived2015 td a:not(.btn) {
+.development td a:not(.btn) {
   margin: 0 0.3em;
   border-bottom: 1px dotted;
 }
 .event h5,
-.development h5,
-.development_archived2015 h5 {
+.development h5 {
   margin-top: 2em;
   margin-bottom: 1em;
 }
 .event h5 a:before,
-.development h5 a:before,
-.development_archived2015 h5 a:before {
+.development h5 a:before {
   content: "";
 }
 .event .finish,
-.development .finish,
-.development_archived2015 .finish {
+.development .finish {
   margin-bottom: 3em;
 }
 .event h2,
-.development h2,
-.development_archived2015 h2 {
+.development h2 {
   margin-top: 3em;
 }
 .event h2:first-child,
-.development h2:first-child,
-.development_archived2015 h2:first-child {
+.development h2:first-child {
   margin-top: 20px !important;
 }
 .event td:first-child,
-.development td:first-child,
-.development_archived2015 td:first-child {
+.development td:first-child {
   width: 10em;
 }
 .result td {
@@ -7066,17 +7097,11 @@ img {
   text-align: right;
 }
 /*強化選手*/
-.development #accordion-container h2,
-.development_archived2015 #accordion-container h2 {
+.development #accordion-container h2 {
   margin-top: 2em !important;
 }
-.development #accordion-container h5,
-.development_archived2015 #accordion-container h5 {
+.development #accordion-container h5 {
   margin-top: 1em !important;
-}
-.development #accordion-container li h5,
-.development_archived2015 #accordion-container li h5 {
-  font-weight: normal!important;
 }
 .develop-wrap {
   margin-left: -15px;
@@ -7224,7 +7249,7 @@ img {
 @media (min-width: 1200px) {
   .junior_players div {
     float: left;
-    width: 41.66666666666667%;
+    width: 33.33333333333333%;
   }
 }
 .junior_players div:last-child {
@@ -7255,7 +7280,7 @@ img {
 @media (min-width: 1200px) {
   .junior_players div:last-child {
     float: left;
-    width: 58.333333333333336%;
+    width: 66.66666666666666%;
   }
 }
 /*vallenato(toggle accordion)*/
@@ -7287,7 +7312,6 @@ img {
 	}
 	*/
 
-  line-height: 1.5;
 }
 .accordion-header:after {
   content: "↓ 詳細を表示";
@@ -7336,47 +7360,4 @@ img {
 }
 .accordion-content {
   display: none;
-}
-/*アーカイブのページ*/
-.event_archived2015 h5,
-.event_archived2016 h5,
-.development_archived2015 h5 {
-  margin-top: 3em !important;
-  margin-bottom: 1em !important;
-}
-.event_archived2015 h5:not(.accordion-header):after,
-.event_archived2016 h5:not(.accordion-header):after,
-.development_archived2015 h5:not(.accordion-header):after {
-  content: "（終了）";
-}
-.event_archived2015 h2 + h5,
-.event_archived2016 h2 + h5,
-.development_archived2015 h2 + h5 {
-  margin-top: 1em !important;
-}
-.event_archived2015 td:first-child,
-.event_archived2016 td:first-child,
-.development_archived2015 td:first-child {
-  width: 9em;
-}
-.event_archived2015 .current,
-.event_archived2016 .current,
-.development_archived2015 .current {
-  color: #69F;
-  color: #990033;
-}
-.event_archived2015 .event_archive,
-.event_archived2016 .event_archive,
-.development_archived2015 .event_archive {
-  padding-left: 0 !important;
-}
-.event_archived2015 .event_archive li,
-.event_archived2016 .event_archive li,
-.development_archived2015 .event_archive li {
-  list-style: none;
-}
-.event_archived2015 .event_archive li a:before,
-.event_archived2016 .event_archive li a:before,
-.development_archived2015 .event_archive li a:before {
-  content: ">> ";
 }
