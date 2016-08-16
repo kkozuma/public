@@ -13,8 +13,9 @@ $(document).ready(function()
 	$('.accordion-header').toggleClass('inactive-header');
 	
 	//Set The Accordion Content Width
-	var contentwidth = $('.accordion-header').width();
-	$('.accordion-content').css({'width' : contentwidth });
+	//表示非表示切り替えられる要素の幅が、トリガーの幅に合わせるようになっているのを無効化
+	/*var contentwidth = $('.accordion-header').width();
+	$('.accordion-content').css({'width' : contentwidth });*/
 	
 	//Open The First Accordion Section When Page Loads
 	/*$('.accordion-header').first().toggleClass('active-header').toggleClass('inactive-header');

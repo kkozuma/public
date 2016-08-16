@@ -269,6 +269,9 @@ a:focus {
 		content:url(../images/icon_pdf.png)
 	}
 }
+.fa-angle-double-right{
+		color:@brand-primary !important
+}
 
 em{
 	text-decoration:none;
@@ -378,18 +381,21 @@ a.topinfo:link{
 	.top_main {
 		.make-sm-column(12);
 		.make-md-column(9);
-	 	.make-lg-column(9);
-	 }
-	 .top_event,.top_recommend{
- 	 	.make-sm-column(4);
- 	 	.make-md-column(4);
- 	 	.make-lg-column(4);
-	 }
+		.make-lg-column(9);
+	}
+	.top_event,.top_recommend{
+		.make-sm-column(4);
+		.make-md-column(4);
+		.make-lg-column(4);
+	}
 	h2{
 		.title_with_line;
 		font-size:@font-size-h4
 	}
 }
+	
+	
+	
 	
 		
  /* top navi */
@@ -605,14 +611,6 @@ a.topinfo:link{
   	 	.make-md-column(4);
   	 	.make-lg-column(4);
  	 }
- 	h2{
- 		.title_with_line;
- 		font-size:@font-size-h4
- 	}
-/*	.top_event{
-		a{
-			display:none !important;}
-	}*/
 	.topinfo{
 		.button-variant(white; desaturate(lighten(@brand-primary,10),10); white);
 		margin:0 0 4em;
@@ -620,17 +618,49 @@ a.topinfo:link{
 	text-align:left;
 }
 /*information*/
- .information{	border-bottom:1px solid #ddd;
+ .information{
+	 h3,p{
+		 display:inline
+	 }
+	 i{
+		 .link-alternative;
+	 }
+	 p{
+		/*display:block;*/
+line-height:1.2 !important;
+		 
+		 
+		 /*&:before{
+			 content:"  →"
+		 }*/
+	 }
+	 	/*border:1px solid #ddd;*/
 
      @media (max-width: @screen-xs-min) {
 		 height:500px !important;
 	 }
- 	height:700px !important;
-	margin-bottom:5em;
- 	overflow-y:scroll !important;
+ 	/*height:300px !important;*/
+	margin-bottom:1.5em;
+	padding-bottom:1.5em;
+	border-bottom:1px dotted @gray20;
+	margin-right:1em;
+ 	/*overflow-y:scroll !important;*/
+	table{
+		margin-top:0;
+		overflow:hidden;
+	}
+	td[colspan="2"] {
+		font-size:0.9em;
+		text-align:right
+		}
+	
  	td {
- 		padding:0.5em 0.5em 0.2em 0.5em;
- 		border-bottom:@gray dotted 1px;
+		p{
+			margin-bottom:0.2em;
+					 line-height:1 !;
+		}
+ 		padding:0.2em 0.5em 0.2em 0.5em;
+ 		/*border-bottom:@gray10 dotted 1px;*/
  		line-height:@line-height-wide;
  		&:nth-child(1) {
  			.emphasized_e;
@@ -652,8 +682,8 @@ a.topinfo:link{
  		.btn-sm{
  			color:@gray80;
  			background:@gray05;
- 			margin-top:0.4em;
- 			padding:0.2em 1em;
+ 			margin:0em;
+ 			padding:0.1em 0.5em;
  			&:hover{
  				background:@gray10;
  				}
@@ -663,6 +693,10 @@ a.topinfo:link{
  		padding:0 0.3em;
  		}
  	}
+	
+	
+	
+	
 	
 /*recommend*/
 /*don't include below into .index! something conflict*/
@@ -718,6 +752,12 @@ h3 .closed:after{
  		}
  	}
  }	
+ 
+ /*登録*/
+ .top_registration{
+	.make-lg-column(4);
+height:20em; 	
+ }
 
  /* top navi right */	
  	.local {
@@ -797,6 +837,75 @@ h3 .closed:after{
  		}
  	}
  }
+
+
+/*infoカテゴリ別*/
+/*@info_event:saturate(spin(#02ec81, 30), 30%);
+@info_development:saturate(spin(#02ec81, 100), 40%);
+@info_tmtu:saturate(spin(#02ec81, 10), 90%);*/
+@info_event:lighten(saturate(spin(@brand-primary, 70), @info_satuate_value),@info_lighten_value);
+@info_development:lighten(saturate(spin(@brand-primary, 140), @info_satuate_value),@info_lighten_value);
+@info_tmtu:lighten(saturate(spin(@brand-primary, 210), @info_satuate_value),@info_lighten_value);
+@info_register:lighten(saturate(spin(@brand-primary, 280), @info_satuate_value),@info_lighten_value);
+@info_reveal:lighten(saturate(spin(@brand-primary, 350), @info_satuate_value),@info_lighten_value);
+@info_satuate_value:10%;
+@info_lighten_value:30%;
+
+.title_eachtitle{
+	margin:0 0 0.2em 0 !important;
+	border:none!important;
+	padding:0
+}
+	
+.title_eachinfo{
+	font-size:0.8em;
+	border-radius:@border-radius-base;
+	color:white;
+	margin-left:0;
+	padding:0.25em 0.5em;
+}
+	 
+h2{ 
+	.info_event &{
+		.title_eachtitle;
+		span {
+			background:@info_event;
+			.title_eachinfo;
+		}
+	}
+		
+	.info_development &{
+		.title_eachtitle;
+		span {
+			background:@info_development;
+			.title_eachinfo;
+		}
+	}
+	.info_tmtu &{
+		.title_eachtitle;
+			span {
+				background:@info_tmtu;
+				.title_eachinfo;
+			}
+		}
+		.info_register &{
+			.title_eachtitle;
+				span {
+					background:@info_register;
+					.title_eachinfo;
+				}
+			}
+			.info_reveal &{
+				.title_eachtitle;
+					span {
+						background:@info_reveal;
+						.title_eachinfo;
+					}
+				}
+}
+
+
+
 
  /* sub pages */
  .sub{
@@ -1631,7 +1740,6 @@ vertical-align: middle;}
 
 
 
-
 .tokai_banner{
 	.make-md-column(8);
 	.make-md-column-offset(2) ;
@@ -1807,6 +1915,7 @@ font-weight:bold;
 .accordion-content {
 	display: none;
 }
+<<<<<<< HEAD
 
 
 
@@ -1845,3 +1954,5 @@ font-weight:bold;
 		}
 	}
 }
+=======
+>>>>>>> 強化ページ作成
