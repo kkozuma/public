@@ -565,6 +565,7 @@ Copyright © 2004-2014 Tokyo Metropolitan Triathlon Union&nbsp;&nbsp;&nbsp;&nbsp
 */
 
   $(document).ready(function(){
+
 	/*lightbox*/
 	$('.gallery_photo a').each(function(){
 	var caps = $(this).attr('data-title');
@@ -582,7 +583,9 @@ $('.dropdown').hover(function() {
     hoverTimeout = setTimeout(function() {
         $self.removeClass('open');
     }, 300);
+	
 });
+
 
 
 /*banner*/
@@ -618,12 +621,29 @@ $('.dropdown').hover(function() {
 		});
 	 });
 	
+	/*font awesome*/
+	$('.information h3 + p ').each(function(){
+	$(this).before( "<i class='fa fa-caret-right' aria-hidden='true'></i>" + " " );
+	 });
+	
+	$('.pdf,.add-angle-double-right').each(function(){
+	$(this).before( "<i class='fa fa-angle-double-right' aria-hidden='true'></i>");
+	 });
+	
+	
+	
+
   });
   
   $('.dropdown').hover(function(){ 
   $('.dropdown-toggle', this).trigger('click'); 
+  
+  
 });
 
 </script>
+<script src="js/vallenato.js" type="text/javascript"></script>
+
+
 </body>
 <!-- InstanceEnd --></html>
