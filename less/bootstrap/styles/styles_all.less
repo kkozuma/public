@@ -625,9 +625,9 @@ a.topinfo:link{
 	 i{
 		 .link-alternative;
 	 }
-	 p{
+	 div{
 		/*display:block;*/
-line-height:1.2 !important;
+line-height:1.5 !important;
 		 
 		 
 		 /*&:before{
@@ -692,6 +692,15 @@ line-height:1.2 !important;
  	.btn-xs{
  		padding:0 0.3em;
  		}
+		.accordion-header {
+		  display: inline;
+		}
+		.open-content {
+		  width: 100% !important;
+		}
+		.link_outer:after {
+		  content: "";
+		}		
  	}
 	
 	
@@ -705,7 +714,8 @@ line-height:1.2 !important;
 	   .btn; 
 	   .btn-info;
 	   .btn-xs;
-	   margin-left:0.5em
+	   margin-left:0.5em;
+	   margin-right: 0.5em;
 	 }
  .new:after {
 	 	content:    "NEW!"; 
@@ -1000,13 +1010,13 @@ h2{
 	}
 }
 /*event,.development*/
-.event,.development,.development_archived2015{
-	
+.event,.development{
 	p,td{
 		a:not(.btn){ //exclude buttons
 		 margin:0 0.3em;
 			border-bottom:1px dotted;
 		}
+		
 	}
 	
 
@@ -1072,9 +1082,6 @@ h2{
 	}  
 	  
 	  
-
-
-
 
 
 /* calendar */
@@ -1779,21 +1786,17 @@ font-weight:bold;
 	}
 	}
 }
+
 /*強化選手*/
-.development,.development_archived2015{
+.development{
 	#accordion-container{
 		h2 {
-			margin-top:2em !important;
+			margin-top:2em !important
 		}
 		h5{
-			margin-top:1em !important;
+			margin-top:1em !important
+			
 		}
-		li{
-			h5{
-			font-weight:normal!important;
-			}
-		}
-		
 	}
 }
 .develop-wrap{
@@ -1836,7 +1839,7 @@ font-weight:bold;
 		.make-xs-column(3);
 		.make-sm-column(3);
 	 	.make-md-column(4);
-	 	.make-lg-column(5);
+	 	.make-lg-column(4);
 		
 		padding:0.3em 0  !important;
 		font-weight:bold;
@@ -1847,7 +1850,7 @@ font-weight:bold;
 			.make-xs-column(4);
 			.make-sm-column(4);
 		 	.make-md-column(6);
-		 	.make-lg-column(7);
+		 	.make-lg-column(8);
 			color:black;
 			font-weight:normal;
 			padding-left:1em !important
@@ -1858,6 +1861,7 @@ font-weight:bold;
 /*vallenato(toggle accordion)*/
 
 #accordion-container {
+	
 }
 
 .accordion_indication{
@@ -1892,7 +1896,6 @@ font-weight:bold;
 		color:red !important;
 	}
 	*/
-		line-height:1.5
 }
 
 .active-header {
@@ -1915,44 +1918,3 @@ font-weight:bold;
 .accordion-content {
 	display: none;
 }
-<<<<<<< HEAD
-
-
-
-
-/*アーカイブのページ*/
-.event_archived2015,.event_archived2016,.development_archived2015{
-	h5{
-		margin-top:3em !important;
-		margin-bottom:1em !important;
-		
-		&:not(.accordion-header){
-			&:after{
-				content:"（終了）";
-			}
-		}
-	}
-	
-	h2+h5 {
-		margin-top:1em !important;
-	}
-	td:first-child{
-		width:9em
-	}
-	
-	.current{
-		color:#69F;
-		color:#903
-	}
-	.event_archive {
-		padding-left:0 !important;
-		li{
-			list-style:none;
-			a:before{
-				content:">> "
-			}
-		}
-	}
-}
-=======
->>>>>>> 強化ページ作成
