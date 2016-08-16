@@ -105,16 +105,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <li><a href="event.html#result">リザルト</a></li>
               </ul>
             </li>
-            
-
-
 
 		<li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown">選手育成・強化 <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="development.html">エリート育成</a></li>
+                <li><a href="development.html#elite">エリート育成</a></li>
                 <li><a href="development.html#kokutai">国体選手育成</a></li>
                 <li><a href="development.html#junior">ジュニア選手強化</a></li>
-                <li><a href="development.html#olympic">オリンピック・パラリンピック選手育成</a></li>
+                <li><a href="development.html#olympic">オリンピック、パラリンピック選手育成</a></li>
               </ul>
             </li>
 
@@ -193,7 +190,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
 		<li class="dropdown"> <a class="dropdown-toggle nav-main" data-toggle="dropdown">選手育成・強化 <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="development.html">エリート育成</a></li>
+                <li><a href="development.html#elite">エリート育成</a></li>
                 <li><a href="development.html#kokutai">国体選手育成</a></li>
                 <li><a href="development.html#junior">ジュニア選手強化</a></li>
                 <li style="padding-bottom:1em;background:rgb(230, 230, 230)"><a href="development.html#olympic" style="padding-bottom:3em;">オリンピック・<br>パラリンピック選手育成</a></li>
@@ -492,6 +489,22 @@ ITU トライアスロンアジアカップ（村上）<br>
         </li>
       </ul>
     </div>
+    
+        <div class="footer_block">
+      <ul>
+        <li><a href="development.html">選手育成・強化</a>
+          <ul>
+                <li><a href="development.html#elite">エリート育成</a></li>
+                <li><a href="development.html#kokutai">国体選手育成</a></li>
+                <li><a href="development.html#junior">ジュニア選手強化</a></li>
+                <li><a href="development.html#olympic">オリンピック、パラリンピック選手育成</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+
+
     <div class="footer_block">
       <ul>
         <li><a href="calendar.html">カレンダー</a></li>
@@ -517,6 +530,8 @@ ITU トライアスロンアジアカップ（村上）<br>
 
 
 </div>
+
+
       <ul id="subnav_mobile" class="mobile">
         <li><a href="members.html">会員向け情報</a></li>
         <li><a href="inquiry.html">お問い合せ</a></li>
@@ -622,22 +637,16 @@ $('.dropdown').hover(function() {
 	 });
 	
 	/*font awesome*/
-	/*$('.information h3').each(function(){
-	$(this).after( "<i class='fa fa-caret-right' aria-hidden='true'></i>" + " " );
-	 });*/
-	
-	$('.information .link_outer').each(function(){
-	$(this).after( "<i class='fa fa-external-link' aria-hidden='true'></i>");
+	$('.information h3 + p ').each(function(){
+	$(this).before( "<i class='fa fa-caret-right' aria-hidden='true'></i>" + " " );
 	 });
 	
-
 	$('.pdf,.add-angle-double-right').each(function(){
 	$(this).before( "<i class='fa fa-angle-double-right' aria-hidden='true'></i>");
 	 });
 	
 	
 	
-
 
   });
   
@@ -649,7 +658,6 @@ $('.dropdown').hover(function() {
 
 </script>
 <script src="js/vallenato.js" type="text/javascript"></script>
-
 
 </body>
 <!-- InstanceEnd --></html>

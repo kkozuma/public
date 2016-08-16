@@ -107,16 +107,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <li><a href="event.html#result">リザルト</a></li>
               </ul>
             </li>
-            
-
-
 
 		<li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown">選手育成・強化 <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="development.html#elite">エリート育成</a></li>
                 <li><a href="development.html#kokutai">国体選手育成</a></li>
                 <li><a href="development.html#junior">ジュニア選手強化</a></li>
-                <li><a href="development.html#olympic">オリンピック選手育成</a></li>
+                <li><a href="development.html#olympic">オリンピック、パラリンピック選手育成</a></li>
               </ul>
             </li>
 
@@ -198,7 +195,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <li><a href="development.html#elite">エリート育成</a></li>
                 <li><a href="development.html#kokutai">国体選手育成</a></li>
                 <li><a href="development.html#junior">ジュニア選手強化</a></li>
-                <li><a href="development.html#olympic">オリンピック選手育成</a></li>
+                <li style="padding-bottom:1em;background:rgb(230, 230, 230)"><a href="development.html#olympic" style="padding-bottom:3em;">オリンピック・<br>パラリンピック選手育成</a></li>
               </ul>
             </li>
 
@@ -538,7 +535,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <li><a href="development.html#elite">エリート育成</a></li>
                 <li><a href="development.html#kokutai">国体選手育成</a></li>
                 <li><a href="development.html#junior">ジュニア選手強化</a></li>
-                <li><a href="development.html#olympic">オリンピック選手育成</a></li>
+                <li><a href="development.html#olympic">オリンピック、パラリンピック選手育成</a></li>
           </ul>
         </li>
       </ul>
@@ -700,9 +697,5 @@ $('.dropdown').hover(function() {
 </script>
 <script src="js/vallenato.js" type="text/javascript"></script>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 強化ページ作成
 </body>
 <!-- InstanceEnd --></html>
